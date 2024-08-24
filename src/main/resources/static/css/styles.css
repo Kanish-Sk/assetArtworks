@@ -1,0 +1,188 @@
+
+.nav-item:hover
+{
+  color: white;
+  background-color:#CAE4DB;
+    padding: 0 18px;
+}
+
+
+.btn-info
+{
+  background-color: #DCAE10;
+}
+
+/*
+      color                                               font
+  MORNING SKY : #CAE4DB                           heading: forum
+  MIST : #7A9D96   dark green
+  HONEY :#DCAE10                                  sub-headings: arboria
+  CERULEAN : #00303F
+
+
+*/
+
+                                                  /* fonts */
+.j-head
+{
+  font-family:"forum";
+  color:#00303F;
+}
+
+.j-subhead
+{
+  font-family: "arboria";
+  color:#DCAE10;
+}
+
+                                                      /* home */
+#home
+{
+  padding: 60px;
+  margin-bottom: 100px;
+}
+
+
+.header-image-size
+{
+  height: 73%;
+  width: 73%;
+  padding: 20px;
+  border: 20px solid #DCAE10;
+}
+
+.home-heading
+{
+  font-family:"forum";
+  font-size:7em;
+  color:#00303F;
+}
+
+.home-subhead
+{
+  font-size: 1.75em;
+}
+
+
+ @media (max-width: 993px) {
+   .home-heading {
+     font-size: 3.5em;
+   }
+   .home-subhead
+   {
+     font-size: 1.25em;
+   }
+   .header-image-size
+   {
+     height: 43%;
+     width:  43%;
+   }
+ }
+
+ @media (max-width: 480px) {
+   .home-heading {
+     font-size: 3em;
+   }
+   .home-subhead
+   {
+     font-size: 0.90em;
+   }
+ }
+
+
+
+
+                                    /* features */
+#features
+{
+  background-color: white;
+}
+.feature-box{
+  text-align: center;
+  padding: 4.5%;
+}
+
+.fa-solid
+{
+  font-size: 50px;
+  color: #7A9D96;
+  margin: 1rem;
+}
+.fa-solid:hover
+{
+  color: #CAE4DB;
+}
+
+
+                                            /* portfolio */
+
+#portfolio
+{
+  text-align: center;
+  padding-top: 58px;
+
+}
+.testimonial-image
+{
+  border-radius: 100%;
+  width: 10%;
+  margin: 20px;
+}
+.carousel-item{
+  padding: 7% 15%;;
+}
+
+
+
+
+                                              /* our-works*/
+#our-works
+{
+  margin-top: 100px;
+  background-color:white;
+  text-align:center;
+  padding-left: 70px;
+  padding-right: 70px;
+  padding-bottom: 70px;
+}
+
+.card-img-top {
+      height: 500px;
+      width: 100px;
+      padding: 30px;
+      object-fit: cover; /* Maintain aspect ratio and cover the container */
+    }
+
+
+.ow-header
+{
+  font-size: 50px;
+}
+#our-works .card
+{
+  background-color: #CAE4DB;
+}
+.card-title
+{
+  font-family:"forum";
+  color:#00303F;
+}
+.card-text
+{
+  font-family: "arboria";
+  color:#DCAE10;
+}
+
+
+
+
+                                                /* contact */
+#contact
+{
+  text-align: center;
+  padding: 50px;
+}
+.contact
+{
+  padding: 20px;
+}

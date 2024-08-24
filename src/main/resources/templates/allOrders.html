@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en"
+    xmlns:th="http://www.thymeleaf.org"
+>
+<head>
+    <meta charset="UTF-8">
+    <title>assetArtWorks-orders</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+          crossorigin="anonymous">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" >asset artworks</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" th:href="@{/home}">Home</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="container">
+    <div class="row col-md-10">
+    <div th:if="${param.updated}">
+          <div class="alert alert-success">
+            status updated!!
+          </div>
+      </div>
+        <h2>List of orders</h2>
+    </div>
+    <table class="table table-bordered table-hover">
+        <thead class="table-dark">
+            <tr>
+                <th>Order-Id</th>
+                <th>Date</th>
+                <th>Type</th>
+                <th>Image Id</th>
+                <th>Title</th>
+                <th>About</th>
+                <th>Price</th>
+                <th>Status</th>
+                 <th>set-Status</th>
+                <th>Ph-No</th>
+                <th>Address</th>
+                <th>UserId</th>
+                <th>UserName</th>
+                <th>UserEmail</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each = "order : ${orderList}">
+                <td th:text = "${order.id}"></td>
+                <td th:text = "${order.date}"></td>
+                <td th:text = "${order.type}"></td>
+                <td th:text = "${order.imageId}"></td>
+                <td th:text = "${order.title}"></td>
+                <td th:text = "${order.about}"></td>
+                <td th:text = "${order.price}"></td>
+                <td th:text = "${order.status}"></td>
+                <td><a sec:authorize="hasAuthority('ROLE_ADMIN')" th:href="@{/setstatus(id=${order.id})}" class="btn btn-info text-right">Update Status</a></td>
+                <td th:text = "${order.phno}"></td>
+                <td th:text = "${order.address}"></td>
+                <td th:text = "${order.userId}"></td>
+                <td th:text = "${order.name}"></td>
+                <td th:text = "${order.email}"></td>
+                
+                
+            </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
